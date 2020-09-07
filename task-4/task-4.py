@@ -2,9 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.misc import derivative as der
 
-cut = 1000
+cut = 50
 
 
+################################################################################
 def fn_plot1d(fn, x_min, x_max, filename):
     func = np.vectorize(fn, otypes=[float])
     x = np.linspace(x_min, x_max, num=cut, dtype=float)
@@ -34,6 +35,7 @@ def fn_plot2d(fn, x_min, x_max, y_min, y_max, filename):
     fig.savefig(filename)
 
 
+################################################################################
 def nth_derivative_plotter(fn, n, xmin, xmax, filename):
     dx = (xmax - xmin) / (2 * cut)
     func = np.vectorize(lambda x: der(fn, x0=x, dx=dx, n=n, order=3))
@@ -48,6 +50,7 @@ def nth_derivative_plotter(fn, n, xmin, xmax, filename):
     fig.savefig(filename)
 
 
+################################################################################
 def h(x):
     if x > 0:
         return np.exp(-1 / x**2)
@@ -68,15 +71,18 @@ def b(x):
         return g(-x)
 
 
+################################################################################
 def sinc(x, y):
     sq = (x**2 + y**2)**0.5
     if sq > 0:
         return np.sin(sq) / sq
     else:
         return 1
+################################################################################
 
 
-fn_plot1d(b, -2, 2, 'fn1plot.png')
-fn_plot2d(sinc, -1.5 * np.pi, 1.5 * np.pi, -1.5 * np.pi, 1.5 * np.pi, 'fn2plot.png')
-nth_derivative_plotter(b, 1, -2, 2, 'bd_1.png')
-nth_derivative_plotter(b, 2, -2, 2, 'bd_2.png')
+if __name__ == '__main__':
+    fn_plot1d(b, -2.0, 2.0, 'fn1plot.png')
+    fn_plot2d(sinc, -1.5 * np.pi, 1.5 * np.pi, -1.5 * np.pi, 1.5 * np.pi, 'fn2plot.png')
+    nth_derivative_plotter(b, 1, -2.0, 2.0, 'bd_1.png')
+    nth_derivative_plotter(b, 2, -2.0, 2.0, 'bd_2.png')
