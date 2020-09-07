@@ -1,0 +1,7 @@
+https://www.kite.com/python/answers/how-to-download-a-csv-file-from-a-url-in-python
+https://tech.aaronteoh.com/b-not-b-opening-files-python-3/
+https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.savefig.html
+https://numpy.org/doc/stable/reference/generated/numpy.linspace.html
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html
+https://pythonspot.com/matplotlib-legend/
+https://www.researchsquare.com/article/rs-53018/v1
