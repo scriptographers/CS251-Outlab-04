@@ -1,0 +1,4 @@
+https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html
+https://numpy.org/doc/stable/reference/generated/numpy.mean.html
+https://numpy.org/doc/stable/reference/generated/numpy.std.html
+https://numpy.org/doc/stable/reference/generated/numpy.set_printoptions.html
