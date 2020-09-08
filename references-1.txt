@@ -2,3 +2,5 @@ https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html
 https://numpy.org/doc/stable/reference/generated/numpy.mean.html
 https://numpy.org/doc/stable/reference/generated/numpy.std.html
 https://numpy.org/doc/stable/reference/generated/numpy.set_printoptions.html
+https://stackoverflow.com/questions/29658567/create-vertical-numpy-arrays-in-python
+https://pyformat.info/
