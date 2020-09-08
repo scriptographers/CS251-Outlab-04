@@ -1,4 +1,4 @@
-Day,Tests per Million,Test Positivity,Recovered,Deceased
+Day,Tests per Million,Test Positivity rate,Recovered,Deceased
 Monday,762.353,0.207,987.0,78.0
 Tuesday,1055.147,0.117,999.0,81.0
 Wednesday,987.206,0.104,885.0,75.0
