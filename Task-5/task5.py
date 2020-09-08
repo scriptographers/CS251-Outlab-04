@@ -50,8 +50,8 @@ days_from_start = round((1 - c)/m) # y_hat = 1 at the end
 print(days_from_start)
 
 # Plotting
-plt.plot(t, H, linewidth=0.5, label="H(t)")
-plt.plot(t, y_hat, linewidth=0.5, label="Fitted line")
+plt.scatter(t, H, s=0.85, label="H(t)")
+plt.plot(t, y_hat, 'r', linewidth=0.5, label="Fitted line")
 plt.hlines(1, t[0], t[-1], colors='black', linestyles='--', linewidth=0.5, label="H(t)=1")
 plt.xlabel("Time (days from April 01, 2020)")
 plt.ylabel("H(t)")
