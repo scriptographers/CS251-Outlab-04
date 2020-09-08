@@ -1,0 +1,4 @@
+https://pillow.readthedocs.io/en/stable/reference/Image.html
+https://stackoverflow.com/questions/902761/saving-a-numpy-array-as-an-image
+https://stackoverflow.com/questions/55319949/pil-typeerror-cannot-handle-this-data-type
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.vq.kmeans2.html
