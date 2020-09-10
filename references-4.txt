@@ -1,0 +1,4 @@
+https://het.as.utexas.edu/HET/Software/Numpy/reference/generated/numpy.vectorize.html
+https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html
+https://matplotlib.org/3.1.1/tutorials/toolkits/mplot3d.html#getting-started
+https://docs.scipy.org/doc/scipy-1.3.3/reference/generated/scipy.misc.derivative.html#scipy.misc.derivative

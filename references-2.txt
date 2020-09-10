@@ -1,0 +1,6 @@
+https://www.datacamp.com/community/tutorials/argument-parsing-in-python
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sample.html
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.array.html
+https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html
+https://pandas.pydata.org/pandas-docs/stable/user_guide/groupby.html
