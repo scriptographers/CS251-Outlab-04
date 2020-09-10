@@ -1,0 +1,10 @@
+https://www.kite.com/python/answers/how-to-download-a-csv-file-from-a-url-in-python
+https://tech.aaronteoh.com/b-not-b-opening-files-python-3/
+https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.savefig.html
+https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.hlines.html
+https://numpy.org/doc/stable/reference/generated/numpy.linspace.html
+https://numpy.org/doc/stable/reference/generated/numpy.roll.html
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html
+https://pythonspot.com/matplotlib-legend/
+https://stackoverflow.com/questions/32932866/numpy-the-best-way-to-remove-the-last-element-from-1-dimensional-array
+https://www.researchsquare.com/article/rs-53018/v1
