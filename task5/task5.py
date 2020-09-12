@@ -8,7 +8,7 @@ from scipy.stats import linregress as LR
 DATA_URL   = "https://api.covid19india.org/csv/latest/case_time_series.csv"
 DATA_PATH  = "data.csv"
 PLOT_PATH  = "covid.png"
-START_DATE = "01 April " # Extra space at the end is important
+START_DATE = "14 April " # Extra space at the end is important
 DPI        = 200 # Controls the quality of the saved image
 
 # Using requests to fetch data
@@ -53,7 +53,7 @@ print(days_from_start)
 plt.scatter(t, H, s=0.85, label="H(t)")
 plt.plot(t, y_hat, 'r', linewidth=0.5, label="Fitted line")
 plt.hlines(1, t[0], t[-1], colors='black', linestyles='--', linewidth=0.5, label="H(t)=1")
-plt.xlabel("Time (days from April 01, 2020)")
+plt.xlabel("Time (days from 15 April, 2020)")
 plt.ylabel("H(t)")
 plt.legend(loc='best')
 plt.title("Lewitt's Metric")
