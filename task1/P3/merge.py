@@ -21,7 +21,7 @@ pos_unlock = infected_unlock / tests_unlock
 # Formatting
 numeric = np.around(np.column_stack((infected_unlock, infected_lock, pos_lock, pos_unlock)), 3)  # Round off till 3 decimal places
 table = np.column_stack((days, numeric))
-header = np.asarray(["Day", "Infected(Unlock)", "Infected(Lock)", "Positivity Rate(Lock)", "Positivity Rate(Unlock)"], dtype=str)
+header = np.asarray(["Day", "Infected(UnLock)", "Infected(Lock)", "Positivity Rate(Lock)", "Positivity Rate(UnLock)"], dtype=str)
 table = np.vstack((header, table))
 
 # Saving as CSV
