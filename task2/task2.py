@@ -1,10 +1,12 @@
 import argparse
+import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
 
+matplotlib.use('agg') # For docker
+
 parser = argparse.ArgumentParser()
 parser.add_argument("--data", type=str, required=True)
-
 args = parser.parse_args()  # Argument Parser
 
 
@@ -26,7 +28,7 @@ for ist_name, data_ins in instances:  # Loop around these instances, in testcase
     ax.set_title('Instance {} - both axes in log scale'.format(ist_name[2]))
     algorithms = data_ins.groupby(['algorithm', 'epsilon'])  # Group by algorithm and epsilon
     for algo_name, data_algo in algorithms:  # Loop around these algorithms, in testcase 7
-        x, y = [], []  # Alternative methods crashing
+        x, y = [], []  # Alternative methods kept crashing
         for horizon, data_horizon in data_algo.groupby('horizon'):
             x.append(horizon), y.append(data_horizon['REG'].sample(n=50).mean())  # Sampled 50 random values
         ax.loglog(x, y, label=lbl(algo_name))  # Loglog plot using matplotlib
