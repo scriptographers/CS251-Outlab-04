@@ -19,7 +19,7 @@ pos_lock = np.around(infected_lock.astype(float) / tests_lock.astype(float), 3)
 pos_unlock = np.around(infected_unlock.astype(float) / tests_unlock.astype(float), 3)
 
 # Formatting
-numeric = np.column_stack((infected_unlock, infected_lock, pos_lock, pos_unlock))  # Round off till 3 decimal places
+numeric = np.column_stack((infected_unlock, infected_lock, pos_lock, pos_unlock))
 table = np.column_stack((days, numeric))
 header = np.asarray(["Day", "Infected(UnLock)", "Infected(Lock)", "Positivity Rate(Lock)", "Positivity Rate(UnLock)"], dtype=str)
 table = np.vstack((header, table))
