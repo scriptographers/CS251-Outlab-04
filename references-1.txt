@@ -6,4 +6,5 @@ https://numpy.org/doc/stable/reference/generated/numpy.savetxt.html
 https://stackoverflow.com/questions/29658567/create-vertical-numpy-arrays-in-python
 https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.dtypes.html
 https://www.geeksforgeeks.org/numpy-column_stack-in-python/
+https://www.geeksforgeeks.org/python-filter-float-strings-from-string-list/
 https://pyformat.info/
