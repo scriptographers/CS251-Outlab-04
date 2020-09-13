@@ -13,12 +13,14 @@ numeric_data = data[:, 1:].astype('float32')
 means = np.around(np.mean(numeric_data, axis=0)[:, None], 3)
 sigmas = np.around(np.std(numeric_data, axis=0)[:, None], 3)
 
+
 def format_floats(val):
-    try: 
+    try:
         float(val)
         return format(float(val), ".3f")
-    except ValueError: 
-        return val 
+    except ValueError:
+        return val
+
 
 # Formatting
 table = np.hstack((header, means, sigmas))
