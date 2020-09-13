@@ -46,7 +46,7 @@ c = inferences[1] # intercept
 y_hat = m*t + c # fitted line
 
 # Finding the approximate day where the lewitt's metric is 1
-days_from_start = round((1 - c)/m) # y_hat = 1 at the end
+days_from_start = int(np.ceil((1 - c)/m)) # y_hat = 1 at the end
 print(days_from_start)
 
 # Plotting
