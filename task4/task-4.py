@@ -1,9 +1,10 @@
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D  # For 3d plots
 from scipy.misc import derivative as der
 
-
+matplotlib.use('agg')  # For docker
 cut = 50
 
 

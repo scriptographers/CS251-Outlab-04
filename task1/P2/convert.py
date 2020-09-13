@@ -13,8 +13,8 @@ days = data[:, 0]
 X = data[:, 1:]
 
 # Computation
-X[:, 1] = np.around(X[:, 1].astype(float)/X[:, 0].astype(float), 3)  # Test positivity rate
-X[:, 0] = np.round(X[:, 0].astype(float)/POPULATION).astype(int)  # Tests per Million (To nearest integer)
+X[:, 1] = np.around(X[:, 1].astype(float) / X[:, 0].astype(float), 3)  # Test positivity rate
+X[:, 0] = np.round(X[:, 0].astype(float) / POPULATION).astype(int)  # Tests per Million (To nearest integer)
 
 # Formatting
 header[1] = "Tests per Million"
