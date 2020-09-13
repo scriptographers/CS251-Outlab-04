@@ -14,7 +14,7 @@ X = data[:, 1:].astype("float32")
 
 # Computation
 X[:, 1] /= X[:, 0]  # Test positivity rate
-X[:, 0] /= POPULATION  # Tests per Million
+X[:, 0] = np.round(X[:, 0]/POPULATION)  # Tests per Million (To nearest integer)
 X = np.around(X, 3)  # Round off to same no. of digits
 
 # Formatting
