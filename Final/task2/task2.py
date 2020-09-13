@@ -3,7 +3,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
 
-matplotlib.use('agg') # For docker
+matplotlib.use('agg')  # For docker
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--data", type=str, required=True)
