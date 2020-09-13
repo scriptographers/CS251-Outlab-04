@@ -1,15 +1,19 @@
 import requests
 import pandas as pd
 import numpy as np
+import matplotlib
 from matplotlib import pyplot as plt
 from scipy.stats import linregress as LR
 
+matplotlib.use('agg')  # For docker
+
 # Constants
-DATA_URL   = "https://api.covid19india.org/csv/latest/case_time_series.csv"
-DATA_PATH  = "data.csv"
-PLOT_PATH  = "covid.png"
-START_DATE = "14 April " # Extra space at the end is important
-DPI        = 200 # Controls the quality of the saved image
+DATA_URL = "https://api.covid19india.org/csv/latest/case_time_series.csv"
+DATA_PATH = "data.csv"
+PLOT_PATH = "covid.png"
+START_DATE = "14 April "  # Extra space at the end is important
+DPI = 200  # Controls the quality of the saved image
+
 
 # Using requests to fetch data
 def getData(DATA_URL, DATA_PATH):
@@ -19,34 +23,35 @@ def getData(DATA_URL, DATA_PATH):
     with open(DATA_PATH, "wb") as f:
         f.write(content)
 
+
 # Preprocessing
 def preprocess(df):
     dates = df["Date"]
     X = df["Total Deceased"]
     idx_start = np.where(dates == START_DATE)[0][0]
-    X = X[idx_start:].to_numpy() # Required data
+    X = X[idx_start:].to_numpy()  # Required data
     return X
 
-# Main
 
-getData(DATA_URL, DATA_PATH) # Call this once per day and then for subsequent uses comment this out
+# Main
+getData(DATA_URL, DATA_PATH)  # Call this once per day and then for subsequent uses comment this out
 df = pd.read_csv(DATA_PATH)
-X  = preprocess(df)
-N  = len(X)
+X = preprocess(df)
+N = len(X)
 
 # Constructing H(t):
-H = X[1:]/X[:-1] # We can also use np.roll(X, -1)/X, but this is faster
+H = X[1:] / X[:-1]  # We can also use np.roll(X, -1)/X, but this is faster
 
-t = np.linspace(1,N-1,N-1) # The time axis
+t = np.linspace(1, N - 1, N - 1)  # The time axis
 
 # Linear Regression
 inferences = LR(t, H)
-m = inferences[0] # slope
-c = inferences[1] # intercept
-y_hat = m*t + c # fitted line
+m = inferences[0]  # slope
+c = inferences[1]  # intercept
+y_hat = m * t + c  # fitted line
 
 # Finding the approximate day where the lewitt's metric is 1
-days_from_start = int(np.ceil((1 - c)/m)) # y_hat = 1 at the end
+days_from_start = int(np.ceil((1 - c) / m))  # y_hat = 1 at the end
 print(days_from_start)
 
 # Plotting
